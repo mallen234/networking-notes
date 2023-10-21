@@ -25,7 +25,7 @@ Headers follow the same structure: a case-insensitive string followed by a colon
 3. <strong><em>Representation headers</em></strong>- contains information about the body of the resource like the MIME type or encoding/compression info
 4. <strong><em>Payload headers</em></strong> - content length and encoding of payload data
 
-![[webservers/http_request_headers3.png]] [2]
+![diagram](webservers/http_request_headers3.png) [2]
 #### Body
 The final part of a request is the body and not always used. `GET`, `HEAD` and `DELETE` don't normally require one. In `POST` requests, data that is required for updates will be placed in the body. So Bodies can be split into two categories:
 1. <strong><em>Single-resource bodies</em></strong> - These are single files split by two headers: Content-Type and Content-length
@@ -67,7 +67,7 @@ Again this is not required and depending on the HTTP response code you may not r
 2. Your browser initiates a connection with the server using TCP three way handshake (two generals problem)
 3. Your browser sends the information in the form a HTTP request, which is then processed in the way detailed above
 4. The browser then renders the returned html to display for you.
-![[webservers/OSI-Model.png]] [3]
+![model](webservers/OSI-Model.png) [3]
 The OSI model is a common representation of networks that is a useful representation of the journey data embarks on. Data works it's way down the layers all the way to the physical cable and then back up again on the recipients end.
 # Understanding TCP
 TCP stands for transmission control program and represents a method used for transmission of data across the internet. HTTP is an application level process and TCP sits at the transport level.
@@ -78,7 +78,7 @@ When someone sends a packet of data along the internet, IP cannot guarantee a nu
 2. It also cannot guarantee that your data arrives in the order it was sent. Data is split into chunks and the IP sends them separately, not caring about the final order.
 ### TCP solution
 TCP is the solution to sending data over an unreliable network. IP alone is not enough to ensure we transfer data so TCP has a method to ensure this.
-                                    ![[webservers/syn-ack 1.png | center]] [4]
+                                    ![syn-ack](webservers/syn-ack 1.png | center) [4]
 
 1. It initiates a connection between the two parties using a three way handshake. This uses the TCP three way handshake. On initial request the sender assigns a random number to SYN which the recipient copies when sending the SYN ACK back. The recipient then assigns a random value to ACK which the original sender uses in the final ACK.
 2. TCP packages up the data that is ready to be sent, dividing data into chunks with a TCP header.
