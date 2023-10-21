@@ -89,7 +89,7 @@ TCP is the solution to sending data over an unreliable network. IP alone is not 
 7. Once all data is received it is sorted into order by TCP header, which is numbered.
 
 ##### References
-1. Wikipedia<em> - https://en.wikipedia.org/wiki/Web_server - date accessed 18/10/23 - </em>
+1. Wikipedia<em> - https://en.wikipedia.org/wiki/Web_server - date accessed 18/10/23</em>
 2. Mozilla<em> - https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages - date accessed 18/10/23</em>
 3. EDUCBA<em> - https://www.educba.com/what-is-osi-model/ - date accessed 18/10/23</em>
 4. Techopedia<em> - https://www.techopedia.com/definition/10339/three-way-handshake - date accessed 21/10/23 </em>
