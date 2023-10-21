@@ -3,7 +3,7 @@
 * A piece of software that sits on a computer with the ability to handle HTTP request and responses.
 * When a browser sends a HTTP protocol, web server accepts the requests, finds the requested document, performs any extra actions and sends back a response to the browser.
 
-![[webservers/web_server.png]] [1]
+![[./webservers/web_server.png]] [1]
 
 
 # Handling Requests
