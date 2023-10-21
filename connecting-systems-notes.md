@@ -78,7 +78,7 @@ When someone sends a packet of data along the internet, IP cannot guarantee a nu
 2. It also cannot guarantee that your data arrives in the order it was sent. Data is split into chunks and the IP sends them separately, not caring about the final order.
 ### TCP solution
 TCP is the solution to sending data over an unreliable network. IP alone is not enough to ensure we transfer data so TCP has a method to ensure this.
-                                    ![syn-ack](webservers/syn-ack 1.png | center) [4]
+                                    ![syn-ack](webservers/syn-ack 1.png) [4]
 
 1. It initiates a connection between the two parties using a three way handshake. This uses the TCP three way handshake. On initial request the sender assigns a random number to SYN which the recipient copies when sending the SYN ACK back. The recipient then assigns a random value to ACK which the original sender uses in the final ACK.
 2. TCP packages up the data that is ready to be sent, dividing data into chunks with a TCP header.
