@@ -7,8 +7,7 @@ The TLS handshake is the way two systems exchange information to open secure cha
 2. The server will then send a hello message back. This will assert which cypher suite and TLS version to use if there are multiple options. Another random number will be sent.
 3. The Server will now send a message containing a certificate. This is the method through which a server can prove their identity to the client. They will also then send the server key exchange message, if using Diffie-Hellman(see below) this is where the server would send the variables $p$ and $g$ followed by the calculated value $g^b \bmod p$ .
 4. The client will then send back their part of the Diffie-Hellman key.
-5. The client will then finish by sending a 'done' message. This will be encrypted with all the specifications established, the server after receiving this message will confirm everything is working by sending an encrypted 'done message' back.
-![mTLS](mTLS/mTLS.png)
+5. The client will then finish by sending a 'done' message. This will be encrypted with all the specifications established, the server after receiving this message will confirm everything is working by sending an encrypted 'done message' back.![mTLS](mTLS/mTLS)
 ## How mTLS differs
 mTLS or mutual transport layer security follows exactly the same procedure as above but both members have to certify their identity. In the system detailed above, this means that after the server presents a certificate the client will also be required to provide a certificate. In certain scenarios both parties want to be confident they are dealing with the system that they claim to be it makes sense to use mTLS. In simple web applications the server side will have systems to verify clients like passwords or tokens that sit within the application but if you want safety from password theft or impersonation you could use mTLS. So it makes sense in scenarios where two big businesses are communicating.
 
@@ -27,9 +26,9 @@ There are various encryption methods used that take advantage of public/private 
 1. Alice and Bob publicly agree to use a given modulus p and base g. 
 2. Alice and Bob then both choose a secret number each, a and b.
 3. They perform the following calculation with their secret numbers a and b
-4. $$ A = g^{a} \bmod p <-> B = g^b \bmod p  $$
+4. $$A = g^{a} \bmod p <-> B = g^b \bmod p$$
  
 5. Alice and Bob send these calculated values to each other which in essence make them both public.
-6. $$ s = B^{a}\bmod p = A^b\bmod p $$
+6. $$s = B^{a}\bmod p = A^b\bmod p$$
 7. Alice and Bob both raise the other persons computed public value to the power of their secret number then modding with p again. This will result in a shared number because of the nature of raising powers - they keep this number secret and use it as the key to encryption.
 8. $$B^{a} \bmod p = A^b \bmod p = g^{ab} \bmod p$$
