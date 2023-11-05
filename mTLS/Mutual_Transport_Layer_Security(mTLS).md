@@ -8,7 +8,7 @@ The TLS handshake is the way two systems exchange information to open secure cha
 3. The Server will now send a message containing a certificate. This is the method through which a server can prove their identity to the client. They will also then send the server key exchange message, if using Diffie-Hellman(see below) this is where the server would send the variables $p$ and $g$ followed by the calculated value $g^b \bmod p$ .
 4. The client will then send back their part of the Diffie-Hellman key.
 5. The client will then finish by sending a 'done' message. This will be encrypted with all the specifications established, the server after receiving this message will confirm everything is working by sending an encrypted 'done message' back.
-![mTLS-diagram.png](mTLS-diagram.png)
+![mTLS](./mTLS-diagram.png)
 ## How mTLS differs
 mTLS or mutual transport layer security follows exactly the same procedure as above but both members have to certify their identity. In the system detailed above, this means that after the server presents a certificate the client will also be required to provide a certificate. In certain scenarios both parties want to be confident they are dealing with the system that they claim to be it makes sense to use mTLS. In simple web applications the server side will have systems to verify clients like passwords or tokens that sit within the application but if you want safety from password theft or impersonation you could use mTLS. So it makes sense in scenarios where two big businesses are communicating.
 
