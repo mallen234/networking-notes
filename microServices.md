@@ -3,6 +3,7 @@ The primary benefit of using a microservices architecture is to solve the issue 
 ## Monoliths vs Microservices
 Monoliths are a more traditional way of creating applications where all code lives in one big repo and gets built into one final product. Everything is coupled together and normally requires one tech stack to be used for every new feature. This means developers have to careful they don't break other things when changing aspects of the system and also everything must be redeployed every time a new change is required. If any part of the system goes down it may impact everything else as a result of the tight coupling. Dependencies may become an issue and eventually different parts can become incredibly tangled.
 ![tradeoff](architecture/TradeOff.png)[1]
+
 This is why some people decide to take the approach of using a microservices architecture. Although there is always a tradeoff and we must understand the pros and cons of each. Fundamentally microservices solves the problem of availability which can plague monoliths but will reduce immediate consistency due to added complexity of so many moving parts.
 
 ## Microservices Design
