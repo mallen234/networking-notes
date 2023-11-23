@@ -1,3 +1,4 @@
+# Microservices Architecture
 The primary benefit of using a microservices architecture is to solve the issue of availability. When built correctly, a system using microservies will be very loosely coupled. This means they are developed independently and can live, build and deploy independently from one another. This can solve many issues that arise when using a traditional monolithic architecture.
 
 ## Monoliths vs Microservices
